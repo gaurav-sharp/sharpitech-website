@@ -1,0 +1,181 @@
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+  border-radius: 0px 0px 4px 4px;
+  -moz-border-radius: 0px 0px 4px 4px;
+  -webkit-border-radius: 0px 0px 4px 4px;
+}
+
+.navbar-text.actions.Social-Icon a:hover {
+  background: #074977;
+  color: #fff!important;
+}
+
+.navbar-text.actions.Social-Icon a {
+  border: 1px solid #DADADA;
+  background: #fff;
+  border-radius: 100%;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 2px;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  padding: 26px 20px 10px;
+  margin-bottom: 22px;
+}
+
+.navbar.navbar-light.navbar-expand-md.shadow-lg.navigation-clean-button {
+  padding-top: 0;
+  padding-bottom: 0px;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.0)!important;
+}
+
+@media (max-width: 576px) {
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding: 10px;
+    margin: 0px;
+  }
+}
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+
+.heading .highlight {
+  color: #FECA4A;
+}
+
+.bantxt .heading {
+  color: #074977;
+  position: relative;
+  margin-top: 15%;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 55px;
+}
+
+.bantxt .txtp {
+  border-left: 2px solid #074977;
+  padding-left: 20px;
+  color: #074977;
+  margin: 30px 0px;
+}
+
+.morebtn:hover {
+  background: #06416a;
+  text-decoration: none;
+  color: #fff;
+}
+
+.morebtn {
+  background: #074977;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.highlight-phone .morebtn {
+  margin-right: 10px;
+}
+
+.bannimg {
+  float: right;
+  width: 50%;
+  height: auto;
+  margin-top: 5%;
+}
+
+.bantxt {
+  position: relative;
+  /*float: left;*/
+  width: 55%;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 45px;
+  height: 8px;
+  border-radius: 10px;
+  background: #074977;
+}
+
+.aboutSec {
+  border-bottom: 1px solid #EAF2FF;
+  padding: 65px 0;
+  background: url(../../assets/img/Aboutimg.png) no-repeat top left #F5F9FF;
+  border-top: 1px solid #EAF2FF;
+  background-size: auto 100%;
+}
+
+.Wbox:hover {
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(25,144,255,0.4);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(25,144,255,0.4);
+  box-shadow: 0px 0px 30px 0px rgba(25,144,255,0.4);
+}
+
+.Wbox {
+  background: #fff;
+  border: 1px solid #E2E2E2;
+  padding: 10%;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(25,144,255,0.2);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(25,144,255,0.2);
+  box-shadow: 0px 0px 30px 0px rgba(25,144,255,0.2);
+  min-height: 500px;
+  text-align: center;
+}
+
+.Wbox.WboxAct {
+  background: #074977;
+  color: #fff;
+}
+
+.Wbox .morebtn:hover {
+  background: #074977;
+  color: #fff;
+  text-decoration: none;
+}
+
+.WboxAct .morebtn:hover {
+  background: rgba(255,255,255,0.73);
+  color: #074977;
+}
+
+.WboxAct .morebtn {
+  background: #fff;
+  color: #074977;
+  /*margin: 0 auto;*/
+  /*display: inline-block;*/
+}
+
+.Wbox h1 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.Wbox p {
+  text-align: left;
+  margin-bottom: 10px;
+  line-height: 30px;
+}
+
+.Wbox .morebtn {
+  border: 1px solid #074977;
+  background-color: #fff;
+  color: #074977;
+  margin-top: 30px;
+}
+
+@media (min-width:1900px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1900px;
+  }
+}
+
