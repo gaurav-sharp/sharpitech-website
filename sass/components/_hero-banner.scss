@@ -1,0 +1,165 @@
+.hero-banner {
+    text-align: center;
+    margin-bottom: 10rem;
+
+    &__img {
+        &--image {
+            margin: 0 auto;
+            max-width: 50rem;
+            width: 100%;
+            height: auto;
+
+            @include adapt(sm) {
+                width: 80%;
+            }
+        }
+    }
+
+    &__text {
+        padding: 6rem 12rem;
+        @include adapt(md) {
+            padding: 6rem 6rem;
+        }
+        @include adapt(sm) {
+            padding: 6rem 3rem;
+        }
+        &--title {
+            h1 {
+                span {
+                    color: darken($dark-grey, 12%);
+                    line-height: 4rem;
+                }
+                font-size: 2.5rem;
+                font-weight: bold;
+            }
+            margin-bottom: 3rem;
+        }
+        &--desc {
+            p {
+                font-size: 1.7rem;
+                line-height: 3.2rem;
+            }
+            margin-bottom: 6rem;
+        }
+    }
+
+    &__slider {
+        &--title {
+            text-align: center;
+            font-size: 1.6rem;
+            line-height: 3.2rem;
+            margin-bottom: 6rem;
+            font-weight: bold;
+        }
+        &--slider {
+            .slick-prev:before, .slick-next:before {
+                color: $orange;
+            }
+            .slick-slide {
+                height: inherit;
+                img {
+                    width: 100%;
+                    height: auto;
+                    filter: grayscale(100%);
+                }
+                &.slick-center {
+                    img {
+                        filter: initial;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.gallery-wrap {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+    height: 80vh;
+
+    @include adapt(sm) {
+        flex-direction: column;
+        height: calc( 100vh - 8rem);
+    }
+ }
+  
+  .item {
+    cursor: pointer;
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    filter: grayscale(100%);
+    transition: flex 0.8s ease;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    
+    &:hover{
+      flex: 6;
+      filter: grayscale(0%);
+    }
+
+    & .item-view {
+        position: absolute;
+        bottom: 10;
+        left: 0;
+        transform: rotate(-90deg);
+        width: 0px;
+        height: 0px;
+
+        @include adapt(sm) {
+            position: relative;
+            transform: rotate(0deg);
+        }
+
+        & span {
+            color: rgba(255,255,255,1);
+            // transform: translate(50%, 0%);
+            font-size: 4rem;
+            white-space: nowrap;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 0px;
+    
+            @include adapt(md) {
+                font-size: 3rem;
+            }
+
+            @include adapt(sm) {
+                font-size: 2rem;
+                // transform: translate(50%, 50%);
+                // display: inline;
+            }
+        }
+    }
+  }
+  
+  .item-1 { 
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('../../images/home/projectLogistics.jpg');
+    
+  }
+  
+  .item-2 { 
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('../../images/home/chemcalTransportation.jpg');
+  }
+  
+  .item-3 { 
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('../../images/home/ContainerTrading.jpg');
+  }
+  
+  .item-4 { 
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('../../images/home/customeBroker.jpg');
+  }
+  
+  .item-5 { 
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('../../images/home/itSolutions.jpg');
+  }
+
+  .item-6 { 
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('../../images/home/corporateSocialResponsibility.jpg');
+  }

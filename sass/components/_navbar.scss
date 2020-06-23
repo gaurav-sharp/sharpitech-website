@@ -1,0 +1,94 @@
+.navbar {
+    padding: 1.2rem 0rem;
+    font-size: 1.5rem;
+    box-shadow: $shadow;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 100;
+
+    .navbar-brand {
+        img {
+            width: 130%;
+            height: auto;
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        background: transparent !important;
+
+        &:focus {
+            outline:none;
+        }
+
+        & .icon-bar {
+            width: 22px; 
+            height: 2px;
+            background-color: red;
+            display: block;
+            transition: all 0.2s;
+            margin-top: 4px;
+        }
+      
+        &.collapsed .top-bar {
+          transform: rotate(0);
+        }
+      
+        &.collapsed .middle-bar {
+          opacity: 1;
+        }
+      
+        &.collapsed .bottom-bar {
+          transform: rotate(0);
+        }
+      
+        & .top-bar {
+          transform: rotate(45deg);
+          transform-origin: 10% 10%;
+        }
+      
+        & .middle-bar {
+          opacity: 0;
+        }
+      
+        & .bottom-bar {
+          transform: rotate(-45deg);
+          transform-origin: 10% 90%;
+        }
+    }
+
+    .navbar-collapse {
+
+       @include adapt(md) {
+           position: absolute;
+           top:9rem;
+           left: 0;
+           width: 100%;
+           background-color: white;
+           box-shadow: $shadow;
+       }
+        & ul.navbar-nav {
+            & li.nav-item {
+                @include adapt(md) {
+                    text-align: center;
+                }
+                & a.nav-link {
+                    padding: 2rem !important;
+                    &:link,&:visited
+                    {
+                        color: $dark-grey;
+                    }
+                    &:hover, &:focus {
+                        color: black;
+                        @include adapt(md) {
+                            background-color: rgba($light-grey,0.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

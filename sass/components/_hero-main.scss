@@ -1,0 +1,17 @@
+.hero-main {
+    background-image: url('../images/background/hero-background3.jpg');
+    background-position: top;
+    background-size: contain;
+    padding-top: 30rem;
+    background-repeat: no-repeat;
+
+    @include adapt(md) {
+        background-size: 150%;
+    }
+    @include adapt(xs) {
+        background-size: 200%;
+    }
+    @include adapt(xxs) {
+        background-size: 300%;
+    }
+}
