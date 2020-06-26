@@ -20,6 +20,7 @@
     "imagesloaded": "^4.1.4",
     "isotope-layout": "^3.0.6",
     "jquery": "^3.5.1",
+    "particles.js": "^2.0.0",
     "slick-slider": "^1.8.2"
   }
 }
