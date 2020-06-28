@@ -17,6 +17,7 @@ a.scroll-to-top {
         right: 10rem;
         cursor: pointer;
         transition: all 1s;
+        z-index: 100;
 
         @include adapt(sm) {
             right: 5rem;

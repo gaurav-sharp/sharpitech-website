@@ -60,3 +60,13 @@
     transition: all 0.2s;
 }
 
+.button-black {
+    font-size: 1rem;
+    color: $color-white;
+    border-radius: 0rem;
+    width: 15rem;
+    text-align: center;
+    padding: 1rem 2rem;
+    background-color: $color-black;;
+    transition: all 0.2s;
+}
