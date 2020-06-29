@@ -27,12 +27,22 @@ $(document).scroll(function () {
     }
 });
 
+
+
 $("a.scroll-to-top").on('click', function (event) {
     event.preventDefault();
     $('html, body').animate({
         scrollTop: 0
     }, 800);
 });
+
+$('.hero-baner__img').slick({
+    fade: true,
+    arrows: false,
+    speed: 2000,
+    autoplay: true
+  });
+
 
 $('.our-client--slider').slick({
     centerMode: true,
