@@ -209,7 +209,7 @@
         
         & .hero-baner__img {
             width: 50%;
-            background-image: url(../../images/laptopSlice_08.png);
+            background-image: url(../images/laptopSlice_08.png);
             background-size: cover;
             order: 2;
 
@@ -348,22 +348,20 @@
                 
                 @include adapt(sm) {
                     margin-bottom: 0rem;
-                    width: 15rem;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border: 1px solid lighten($light-grey,20%);
                     margin-right: 2rem;
                 }
 
                 img {
-                    width: 10rem;
-                    height: 10rem;
-                    border-radius: 50%;
-                    //border: 1px solid lighten($light-grey,20%);
-                    box-shadow: 0rem 0px 1rem rgba($light-grey,0.3);
+                    width: 100%;
+                    height: auto;
+                    filter: grayscale(0.5);
+
                     @include adapt(sm) {
-                        box-shadow: none;
+                        width: 18rem;
+                        height: auto;
                     }
                 }
             }
@@ -389,6 +387,7 @@
                     font-size: 1.2rem;
                     color: $color-black;
                     text-decoration: underline;
+                    display: none;
                 }
             }
         }
@@ -647,6 +646,8 @@
 
 
                 & .what-we-offer__items--item-wrapper {
+                    text-align: center;
+                    
                     & .what-we-offer__items--item-title {
                         h2 {
                             font-family: "Noto Serif", serif;
@@ -661,6 +662,7 @@
                         }
                     }
                     & .what-we-offer__items--item-action {
+                        display: none;
                         text-align: right;
                         a {
                             font-size: 2rem;
@@ -807,7 +809,7 @@ background-color: $grey-background;
 
             & .contact-us__container--details-title {
                 font-family: "Noto Serif", serif;
-                font-size: 4rem;
+                font-size: 3rem;
                 margin-bottom: 2rem;
             }
             & .contact-us__container--details-detail {
@@ -858,7 +860,7 @@ background-color: $grey-background;
             & .contact-us__container--form-title {
                 & h1 {
                     font-family: $font-serif;
-                    font-size: 4rem;
+                    font-size: 3rem;
                     margin-bottom: 2rem;
                 }
 

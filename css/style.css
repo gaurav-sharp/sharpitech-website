@@ -345,7 +345,7 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
         flex-direction: column; } }
     .hero-banner .container .hero-baner__img {
       width: 50%;
-      background-image: url(../../images/laptopSlice_08.png);
+      background-image: url(../images/laptopSlice_08.png);
       background-size: cover;
       order: 2; }
       @media (max-width: 991.98px) {
@@ -439,20 +439,18 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
         @media (max-width: 767.98px) {
           .quick-icons .quick-icons__wrapper .quick-icons__icon .quick-icons__icon--icon {
             margin-bottom: 0rem;
-            width: 15rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 1px solid #dbdcdd;
             margin-right: 2rem; } }
         .quick-icons .quick-icons__wrapper .quick-icons__icon .quick-icons__icon--icon img {
-          width: 10rem;
-          height: 10rem;
-          border-radius: 50%;
-          box-shadow: 0rem 0px 1rem rgba(167, 169, 171, 0.3); }
+          width: 100%;
+          height: auto;
+          filter: grayscale(0.5); }
           @media (max-width: 767.98px) {
             .quick-icons .quick-icons__wrapper .quick-icons__icon .quick-icons__icon--icon img {
-              box-shadow: none; } }
+              width: 18rem;
+              height: auto; } }
       .quick-icons .quick-icons__wrapper .quick-icons__icon .quick-icons__icon--title {
         margin-bottom: 2rem; }
         .quick-icons .quick-icons__wrapper .quick-icons__icon .quick-icons__icon--title h2 {
@@ -466,7 +464,8 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
       .quick-icons .quick-icons__wrapper .quick-icons__icon .quick-icons__icon--action a {
         font-size: 1.2rem;
         color: black;
-        text-decoration: underline; }
+        text-decoration: underline;
+        display: none; }
 
 .why-sit {
   background-color: #f5f5f5; }
@@ -644,18 +643,21 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
       transform: scale(0.5);
       transition: all 0.2s;
       background-color: rgba(0, 0, 0, 0.8); }
-      .what-we-offer .what-we-offer__items .what-we-offer__items--item .what-we-offer__items--item-overlay .what-we-offer__items--item-wrapper .what-we-offer__items--item-title h2 {
-        font-family: "Noto Serif", serif;
-        font-size: 2rem;
-        color: white; }
-      .what-we-offer .what-we-offer__items .what-we-offer__items--item .what-we-offer__items--item-overlay .what-we-offer__items--item-wrapper .what-we-offer__items--item-desc p {
-        font-size: 1.2rem;
-        color: #A7A9AB; }
-      .what-we-offer .what-we-offer__items .what-we-offer__items--item .what-we-offer__items--item-overlay .what-we-offer__items--item-wrapper .what-we-offer__items--item-action {
-        text-align: right; }
-        .what-we-offer .what-we-offer__items .what-we-offer__items--item .what-we-offer__items--item-overlay .what-we-offer__items--item-wrapper .what-we-offer__items--item-action a {
+      .what-we-offer .what-we-offer__items .what-we-offer__items--item .what-we-offer__items--item-overlay .what-we-offer__items--item-wrapper {
+        text-align: center; }
+        .what-we-offer .what-we-offer__items .what-we-offer__items--item .what-we-offer__items--item-overlay .what-we-offer__items--item-wrapper .what-we-offer__items--item-title h2 {
+          font-family: "Noto Serif", serif;
           font-size: 2rem;
           color: white; }
+        .what-we-offer .what-we-offer__items .what-we-offer__items--item .what-we-offer__items--item-overlay .what-we-offer__items--item-wrapper .what-we-offer__items--item-desc p {
+          font-size: 1.2rem;
+          color: #A7A9AB; }
+        .what-we-offer .what-we-offer__items .what-we-offer__items--item .what-we-offer__items--item-overlay .what-we-offer__items--item-wrapper .what-we-offer__items--item-action {
+          display: none;
+          text-align: right; }
+          .what-we-offer .what-we-offer__items .what-we-offer__items--item .what-we-offer__items--item-overlay .what-we-offer__items--item-wrapper .what-we-offer__items--item-action a {
+            font-size: 2rem;
+            color: white; }
 
 .work-with-us {
   background: url("../images/388.jpg");
@@ -757,7 +759,7 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
           max-width: 100%; } }
       .contact-us .contact-us__container .contact-us__container--details .contact-us__container--details-title {
         font-family: "Noto Serif", serif;
-        font-size: 4rem;
+        font-size: 3rem;
         margin-bottom: 2rem; }
       .contact-us .contact-us__container .contact-us__container--details .contact-us__container--details-detail {
         display: flex; }
@@ -788,7 +790,7 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
           width: 100%; } }
       .contact-us .contact-us__container .contact-us__container--form .contact-us__container--form-title h1 {
         font-family: "Noto Serif", serif;
-        font-size: 4rem;
+        font-size: 3rem;
         margin-bottom: 2rem; }
       .contact-us .contact-us__container .contact-us__container--form .contact-us__container--form-title p {
         font-size: 1.5rem;
