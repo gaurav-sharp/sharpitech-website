@@ -117,13 +117,13 @@
 }
 #IymsSlider {
     position: relative;
-    height: 60vh;
+    height: 80vh;
     font-size: 1.6rem;
 
     & .slides .slide-1,
     & .slides .slide-2,
     & .slides .slide-3 {
-            height: 60vh;
+            height: 80vh;
             background-size: cover;
             background-position: right;
             background-repeat: no-repeat;
@@ -140,7 +140,7 @@
     }
     
     & .slides .slide-3 {
-        background-image: linear-gradient(rgba($color-black,0.3),rgba($color-black,0.2)),url('../img/sliders/slider1.jpg');
+        background-image: linear-gradient(rgba($color-black,0.3),rgba($color-black,0.2)),url('../images/iymsSlider3.png');
     }
 
     & .carousel-control-next, 
@@ -149,7 +149,7 @@
     }
 
     & .carousel-inner .carousel-item {
-        height: 60vh;
+        height: 80vh;
 
         & .hero {
             position: absolute;
@@ -263,6 +263,11 @@
 
                 i {
                     font-size: 5rem;
+                    transition: all 0.2s;
+
+                    &:hover {
+                        color: #0b7df4;
+                    }
                     
                 }
             }

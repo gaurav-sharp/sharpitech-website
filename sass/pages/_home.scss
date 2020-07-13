@@ -73,6 +73,7 @@
                 & a.nav-link {
                     padding: 2rem !important;
                     font-weight: 600;
+                    transition: all 0.2s;
 
                     &:link,
                     &:visited {
@@ -150,12 +151,34 @@
         }
         & ul.navbar-nav {
             &.icon-group {
+                align-items: center;
                 @include adapt(md) {
                     display: none;
                 }
                 & li.nav-item {
                     & a.nav-link {
-                        padding: 2rem 1.5rem !important;
+                        padding: 1rem !important;
+                        
+                        &.facebook {
+                            &:hover,
+                            &:focus {
+                                color: rgb(59, 89, 152);
+                            }
+                        }
+    
+                        &.linkedin {
+                            &:hover,
+                            &:focus {
+                                color: rgb(0, 123, 182);
+                            }
+                        }
+    
+                        &.youtube {
+                            &:hover,
+                            &:focus {
+                                color: rgb(187, 0, 0);
+                            }
+                        }
                     }
                 }
             }

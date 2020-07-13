@@ -31,8 +31,10 @@
 }
 
 .button-white-border-hoverable {
+    display: inline-block;
+    text-decoration: none;
     font-size: 1rem;
-    color: $color-white;
+    color: $color-white !important;
     border: 1px solid $color-white;
     border-radius: 0rem;
     width: 15rem;
@@ -40,17 +42,58 @@
     padding: 1rem 2rem;
     background-color: transparent;
     transition: all 0.2s;
-
-
-    &:hover {
-        color: $color-black;
-        background-color: $color-white;
-    }
+    overflow: hidden;
+    position: relative;
+    
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        background: rgba(255,255,255,0.5);
+        width: 60px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        opacity: .5;
+        filter: blur(30px);
+        transform: translateX(-100px)  skewX(-15deg);
+      }
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        background: rgba(255,255,255,0.2);
+        width: 30px;
+        height: 100%;
+        left: 30px;
+        top: 0;
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100px) skewX(-15deg);
+      }
+      &:hover,
+      &:focus{
+        color: $color-white;
+        text-decoration: none;
+        cursor: pointer;
+        &:before{
+          transform: translateX(300px)  skewX(-15deg);  
+          opacity: 0.6;
+          transition: 1.4s;
+        }
+        &:after{
+          transform: translateX(300px) skewX(-15deg);  
+          opacity: 1;
+          transition: 1.4s;
+        }
+      }
 }
 
 .button-white {
+    display: inline-block;
+    text-decoration: none;
     font-size: 1rem;
-    color: $color-black;
+    color: $color-black !important;
     border: 1px solid $color-white;
     border-radius: 0rem;
     width: 15rem;
@@ -58,15 +101,106 @@
     padding: 1rem 2rem;
     background-color: $color-white;;
     transition: all 0.2s;
+    overflow: hidden;
+    position: relative;
+
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        background: rgba(0,0,0,0.5);
+        width: 60px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        opacity: .5;
+        filter: blur(30px);
+        transform: translateX(-100px)  skewX(-15deg);
+      }
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        background: rgba(0,0,0,0.2);
+        width: 30px;
+        height: 100%;
+        left: 30px;
+        top: 0;
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100px) skewX(-15deg);
+      }
+      &:hover,
+      &:focus{
+        color: $color-white;
+        text-decoration: none;
+        cursor: pointer;
+        &:before{
+          transform: translateX(300px)  skewX(-15deg);  
+          opacity: 0.6;
+          transition: 1.4s;
+        }
+        &:after{
+          transform: translateX(300px) skewX(-15deg);  
+          opacity: 1;
+          transition: 1.4s;
+        }
+      }
 }
 
 .button-black {
+    position: relative;
+    text-decoration: none;
     font-size: 1rem;
-    color: $color-white;
+    color: $color-white !important;
     border-radius: 0rem;
     width: 15rem;
     text-align: center;
     padding: 1rem 2rem;
     background-color: $color-black;;
     transition: all 0.2s;
+    overflow: hidden;
+
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        background: rgba(255,255,255,0.5);
+        width: 60px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        opacity: .5;
+        filter: blur(30px);
+        transform: translateX(-100px)  skewX(-15deg);
+      }
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        background: rgba(255,255,255,0.2);
+        width: 30px;
+        height: 100%;
+        left: 30px;
+        top: 0;
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100px) skewX(-15deg);
+      }
+      &:hover,
+      &:focus{
+        color: $color-white !important;
+        text-decoration: none;
+        cursor: pointer;
+        &:before{
+          transform: translateX(300px)  skewX(-15deg);  
+          opacity: 0.6;
+          transition: 1.4s;
+        }
+        &:after{
+          transform: translateX(300px) skewX(-15deg);  
+          opacity: 1;
+          transition: 1.4s;
+        }
+      }
 }
