@@ -248,6 +248,11 @@
             margin-bottom: 3rem;
             text-align: left;
             
+            &:hover {
+                i {
+                    color: #0b7df4;
+                }
+            }
             
             & .pageIyms-quick-icon__icons--icon-icon {
                 margin-bottom: 2rem;
@@ -263,12 +268,7 @@
 
                 i {
                     font-size: 5rem;
-                    transition: all 0.2s;
-
-                    &:hover {
-                        color: #0b7df4;
-                    }
-                    
+                    transition: all 0.2s;       
                 }
             }
 

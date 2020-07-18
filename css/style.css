@@ -1003,6 +1003,8 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
       display: flex;
       flex-direction: column;
       margin-bottom: 3rem; }
+      .pageIcms-quick-icon .pageIcms-quick-icon__icons .pageIcms-quick-icon__icons--icon:hover i {
+        color: #0b7df4; }
       @media (max-width: 767.98px) {
         .pageIcms-quick-icon .pageIcms-quick-icon__icons .pageIcms-quick-icon__icons--icon {
           flex-direction: row;
@@ -1018,7 +1020,8 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
             align-items: center;
             margin-right: 2rem; } }
         .pageIcms-quick-icon .pageIcms-quick-icon__icons .pageIcms-quick-icon__icons--icon .pageIcms-quick-icon__icons--icon-icon i {
-          font-size: 5rem; }
+          font-size: 5rem;
+          transition: all 0.2s; }
       .pageIcms-quick-icon .pageIcms-quick-icon__icons .pageIcms-quick-icon__icons--icon .pageIcms-quick-icon__icon--tile {
         margin-bottom: 1rem; }
         .pageIcms-quick-icon .pageIcms-quick-icon__icons .pageIcms-quick-icon__icons--icon .pageIcms-quick-icon__icon--tile h2 {
@@ -1397,6 +1400,8 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
       flex-direction: row;
       margin-bottom: 3rem;
       text-align: left; }
+      .pageIyms-quick-icon .pageIyms-quick-icon__icons .pageIyms-quick-icon__icons--icon:hover i {
+        color: #0b7df4; }
       .pageIyms-quick-icon .pageIyms-quick-icon__icons .pageIyms-quick-icon__icons--icon .pageIyms-quick-icon__icons--icon-icon {
         margin-bottom: 2rem;
         width: 15rem;
@@ -1410,8 +1415,6 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
         .pageIyms-quick-icon .pageIyms-quick-icon__icons .pageIyms-quick-icon__icons--icon .pageIyms-quick-icon__icons--icon-icon i {
           font-size: 5rem;
           transition: all 0.2s; }
-          .pageIyms-quick-icon .pageIyms-quick-icon__icons .pageIyms-quick-icon__icons--icon .pageIyms-quick-icon__icons--icon-icon i:hover {
-            color: #0b7df4; }
       .pageIyms-quick-icon .pageIyms-quick-icon__icons .pageIyms-quick-icon__icons--icon .pageIyms-quick-icon__icon--tile {
         margin-bottom: 1rem; }
         .pageIyms-quick-icon .pageIyms-quick-icon__icons .pageIyms-quick-icon__icons--icon .pageIyms-quick-icon__icon--tile h2 {
