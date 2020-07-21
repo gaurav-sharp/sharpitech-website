@@ -21,6 +21,7 @@
     "isotope-layout": "^3.0.6",
     "jquery": "^3.5.1",
     "particles.js": "^2.0.0",
+    "plyr": "^3.6.2",
     "slick-slider": "^1.8.2"
   }
 }

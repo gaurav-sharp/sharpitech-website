@@ -1,33 +1,33 @@
 .shared-title {
-    text-align: center;
-    position: relative;
-    padding: 1rem;
-    width: 80%;
-    margin: 0 auto;
+      text-align: center;
+      position: relative;
+      padding: 1rem;
+      width: 80%;
+      margin: 0 auto;
 
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 5rem;
-        height: 0.2rem;
-        background-color: $color-black;
-        
-    }
+      &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 5rem;
+          height: 0.2rem;
+          background-color: $color-black;
+          
+      }
 
-    & .shared-title__title {
-        font-family: $font-serif;
-        font-size: 4rem;
-        margin-bottom: 2rem;
-    }
+      & .shared-title__title {
+          font-family: $font-serif;
+          font-size: 4rem;
+          margin-bottom: 2rem;
+      }
 
-    & .shared-title__desc {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-        color: $light-grey;
-    }
+      & .shared-title__desc {
+          font-size: 1.5rem;
+          margin-bottom: 2rem;
+          color: $light-grey;
+      }
 }
 
 .button-white-border-hoverable {

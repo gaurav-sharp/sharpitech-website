@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="node_modules/slick-slider/slick/slick.css">
     <link rel="stylesheet" href="node_modules/slick-slider/slick/slick-theme.css">
+    <link rel="stylesheet" href="node_modules/plyr/dist/plyr.css">
     <link rel="stylesheet" href="css/style.css">
     <title>SharpITech Solutions Pvt. Ltd.</title>
   </head>
@@ -166,11 +167,31 @@
             </div>
         </div>
     </div>
+    <div class="who-we-are">
+        <div class="container">
+            <div class="who-we-are__title">
+                <h1 class="who-we-are__title--title">
+                    Who We Are   
+                </h1>
+                <p class="who-we-are__title--desc">
+                    We have a deep understanding of our customer’s needs, accept challenges and provide solutions through
+                    our array of innovative solutions and services mainly in the field of
+                </p>
+            </div>
+            <div class="who-we-are__video">
+                <video id="plyrVideo" poster="images/SharpiTechVideoPoster.jpg"
+                controls crossorigin>
+                <source id="plyrSource" src="images/SharpiTechVideo.mp4"
+                    type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
     <div class="why-sit">
         <div class="why-sit__img" >
             <div class="container">
                 <div class="why-sit__img--wrapper" data-aos="fade-right">
-                    <img src="images/whysitSlice_03_03.png" alt="" >
+                    <img src="images/whysitSlice_03_03.gif" alt="" >
                 </div>
             </div>
         </div>
@@ -456,8 +477,8 @@
                         <div class="our-team__member--photo-social">
                             <ul>
                                 <!-- <li><a href="#"><i class="fab fa-facebook-f"></a></i></li> -->
-                                <li><a href="#"><i class="fab fa-twitter"></a></i></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></a></i></li>
+                                <li><a><i class="fab fa-twitter"></a></i></li>
+                                <li><a><i class="fab fa-linkedin-in"></a></i></li>
                             </ul>
                         </div>
                     </div>
@@ -622,6 +643,7 @@
     <script src="node_modules/imagesloaded/imagesloaded.pkgd.min.js" ></script>
     <script src="node_modules/isotope-layout/dist/isotope.pkgd.min.js"></script>
     <script src="node_modules/slick-slider/slick/slick.min.js"></script>
+    <script src="node_modules/plyr/dist/plyr.js"></script>
     <script src="js/main.js" ></script>
 
     <script>
@@ -636,6 +658,15 @@
               );
           }
         });
+        const player = new Plyr('#plyrVideo');
+        
+        var plyr_options = {
+        autoplay: false,
+        clickToPlay: true,
+        showPosterOnEnd: true,
+        controls: ['mute', 'progress', 'play', 'fullscreen', 'volume']
+        };
+        var players = plyr.setup(plyr_options);
       </script>
   </body>
 </html>

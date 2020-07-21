@@ -416,6 +416,62 @@
         }
     }
 }
+
+.who-we-are {
+    padding: 8rem 0rem;
+    background-image: linear-gradient(rgba($color-black,0.9),rgba($color-black,0.9)),url('../images/videobg.jpg');
+    backdrop-filter: blur(10px);
+    background-attachment: fixed;
+
+    .who-we-are__title {
+        text-align: center;
+        position: relative;
+        padding: 1rem;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5rem;
+            height: 0.2rem;
+            background-color: $color-white;
+            
+        }
+    
+        & .who-we-are__title--title {
+            font-family: $font-serif;
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            color: $color-white;
+        }
+    
+        & .who-we-are__title--desc {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: $light-grey;
+        }
+
+    }
+    
+    .plyr--video {
+        width: 70%;
+        height: auto;
+        margin: auto;
+        -webkit-border-radius: 0.5rem;
+        border-radius: 0.5rem;
+
+        @include adapt(md) {
+            width: 90%;
+        }
+    }
+    
+}
+
 .why-sit{
     background-color: $grey-background;
         
@@ -432,7 +488,7 @@
                 transform: translateY(7rem);
 
                 @include adapt(sm) {
-                    width: 40rem;
+                    width: 50rem;
                 }
 
             }
