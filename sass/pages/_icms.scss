@@ -164,9 +164,16 @@
                 }
                 & .pageIcms-features-desktop__details--detail-points{
                     margin-bottom: 2rem;
+                    @include adapt(md) {
+                        text-align: left;
+                    }
+
+
                     & p {
                         font-size: 1.5rem;
                         color: $light-grey;
+
+                        
                     }
                 }
             }

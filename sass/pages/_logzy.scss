@@ -10,7 +10,7 @@
         height: calc(100vh - 86px - 52px);
         top: 0;
         left: 0;
-        filter: grayscale(1) brightness(0.2) blur(2px);
+        filter: grayscale(1) brightness(0.6) blur(2px);
         margin: -1rem;
 
         @include adapt(md) {
