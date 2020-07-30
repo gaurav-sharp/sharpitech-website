@@ -5,16 +5,30 @@
 
     &--wrapper {
         display: flex;
+        
+        @include adapt(md) {
+            flex-direction: column;
+        }
     }
     &--vector {
         width: 50%;
-        background-color: $color-black;
+        background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('../images/careerVect.jpg');
+        background-size: cover;
+        
+        @include adapt(md) {
+            height: 50rem;
+            width: 100%;
+        }
     }
     &--form {
         width: 50%;
         font-size: 1.5rem;
         padding: 4rem;
         background-color: $grey-background;
+
+        @include adapt(md) {
+            width: 100%;
+        }
 
         & input[type="text"],
         & input[type="email"] {
@@ -29,7 +43,6 @@
         & .custom-file {
             margin-bottom: 1.5rem;
             height: 4rem;
-            
 
             & .custom-file-label {
                 font-size: 1.5rem;
