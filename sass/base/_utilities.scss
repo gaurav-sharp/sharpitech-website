@@ -204,3 +204,29 @@
         }
       }
 }
+
+.showerrormessage {
+  color: $color-red;
+  display: block;
+}
+
+.hiderrormessage {
+  display: none;
+}
+
+.errorborder {
+  border-color: $color-red !important;
+}
+
+.successborder {
+  border-color: $color-red !important;
+}
+
+.modal-content {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.modal-header {
+  border-bottom: none;
+}

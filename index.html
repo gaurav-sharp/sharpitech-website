@@ -38,6 +38,7 @@
                             <a class="dropdown-item" href="./icms.html">iCMS</a>
                             <a class="dropdown-item" href="./iyms.html">iYMS</a>
                             <a class="dropdown-item" href="./logzy.html">Logzy</a>
+                            <a class="dropdown-item" href="./sharplogistics.html">Sharp Logistics</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -93,6 +94,7 @@
                           <a class="dropdown-item" href="./icms.html">iCMS</a>
                           <a class="dropdown-item" href="./iyms.html">iYMS</a>
                           <a class="dropdown-item" href="./logzy.html">LOGZY</a>
+                          <a class="dropdown-item" href="./sharplogistics.html">SHARP LOGISTICS</a>
                         </div>
                     </div>
                 </div>    
@@ -273,7 +275,7 @@
                     <div class="what-we-offer__items--item-overlay">
                         <div class="what-we-offer__items--item-wrapper">
                             <div class="what-we-offer__items--item-title">
-                                <h2>iCMS</h2>
+                                <a href="./icms.html">iCMS</a>
                             </div>
                             <div class="what-we-offer__items--item-desc">
                                 <p>
@@ -293,7 +295,7 @@
                     <div class="what-we-offer__items--item-overlay">
                         <div class="what-we-offer__items--item-wrapper">
                             <div class="what-we-offer__items--item-title">
-                                <h2>Software As A Service</h2>
+                                <a>Software As A Service</a>
                             </div>
                             <div class="what-we-offer__items--item-desc">
                                 <p>
@@ -313,7 +315,7 @@
                     <div class="what-we-offer__items--item-overlay">
                         <div class="what-we-offer__items--item-wrapper">
                             <div class="what-we-offer__items--item-title">
-                                <h2>Infrastructure Solutions</h2>
+                                <a>Infrastructure Solutions</a>
                             </div>
                             <div class="what-we-offer__items--item-desc">
                                 <p>
@@ -333,7 +335,7 @@
                     <div class="what-we-offer__items--item-overlay">
                         <div class="what-we-offer__items--item-wrapper">
                             <div class="what-we-offer__items--item-title">
-                                <h2>Sharp Logistics</h2>
+                                <a href="./sharplogistics.html">Sharp Logistics</a>
                             </div>
                             <div class="what-we-offer__items--item-desc">
                                 <p>
@@ -353,7 +355,7 @@
                     <div class="what-we-offer__items--item-overlay">
                         <div class="what-we-offer__items--item-wrapper">
                             <div class="what-we-offer__items--item-title">
-                                <h2>Consultancy Service</h2>
+                                <a>Consultancy Service</a>
                             </div>
                             <div class="what-we-offer__items--item-desc">
                                 <p>
@@ -373,7 +375,7 @@
                     <div class="what-we-offer__items--item-overlay">
                         <div class="what-we-offer__items--item-wrapper">
                             <div class="what-we-offer__items--item-title">
-                                <h2>iYMS</h2>
+                                <a href="./iyms.html">iYMS</a>
                             </div>
                             <div class="what-we-offer__items--item-desc">
                                 <p>
@@ -393,7 +395,7 @@
                     <div class="what-we-offer__items--item-overlay">
                         <div class="what-we-offer__items--item-wrapper">
                             <div class="what-we-offer__items--item-title">
-                                <h2>Contingency Plan</h2>
+                                <a>Contingency Plan</a>
                             </div>
                             <div class="what-we-offer__items--item-desc">
                                 <p>
@@ -413,7 +415,7 @@
                     <div class="what-we-offer__items--item-overlay">
                         <div class="what-we-offer__items--item-wrapper">
                             <div class="what-we-offer__items--item-title">
-                                <h2>LogZY</h2>
+                                <a href="./logzy.html">LogZY</a>
                             </div>
                             <div class="what-we-offer__items--item-desc">
                                 <p>
@@ -608,21 +610,24 @@
                         <h1>We'd love to hear from you</h1>
                         <p>Whether you have question about features or pricing, want a demo or anything else- our team is there 24*7 to help you.</p>
                     </div>
+                    <div id="divSuccess" style="display:none;font-size:16px" class="alert alert-success">
+                        Thank you for showing interest.One of our teammate would connect with you.
+                    </div>
                     <div class="contact-us__container--form-form">
-                        <form class="needs-validation" novalidate>
+                        <form id="contact-form">
                             <div class="form-group">
                                 <!-- <label for="contact-name">Name</label> -->
-                                <input type="text" class="form-control" id="contact-name" placeholder="Name" required>
+                                <input type="text" class="form-control" id="contact-name" placeholder="Name">
                             </div>
                             <div class="form-group">
                                 <!-- <label for="contact-email">Email address</label> -->
-                                <input type="email" class="form-control" id="contact-email" placeholder="Email" required>
+                                <input type="email" class="form-control" id="contact-email" placeholder="Email">
                             </div>
                             <div class="form-group">
                                 <!-- <label for="contact-message">Message</label> -->
-                                <textarea id="contact-message" class="form-control" cols="50" placeholder="Message" required></textarea>
+                                <textarea id="contact-message" class="form-control" cols="50" placeholder="Message"></textarea>
                             </div>
-                            <button class="button-black" type="submit" id="contact-submit">SUBMIT</button>
+                            <button onclick="postContactDetails();" class="button-black" type="button">SUBMIT</button>
                         </form>
                     </div>
                 </div>
@@ -664,6 +669,7 @@
     <script src="node_modules/slick-slider/slick/slick.min.js"></script>
     <script src="node_modules/plyr/dist/plyr.js"></script>
     <script src="js/main.js" ></script>
+    <script src="js/pleaseWait.js"></script>
 
     <script>
         $("a.nav-link").on('click', function (event) {
@@ -688,17 +694,20 @@
         var players = plyr.setup(plyr_options);
 
         function postContactDetails() {
-            alert('hi');
+            showPleaseWait(); 
             $.ajax({
                 type: "POST",
                 url: "sitService.asmx/PostContactDetails",
-                data: "{ 'name': $('#contact-name').val(), 'email': $('#contact-email').val(), 'message': $('#contact-message').val() }",
+                data: "{'name':'" + $("#contact-name").val() + "','email': '"+$("#contact-email").val()+"', 'message':'"+ $("#contact-message").val()+"'}",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (response) {
-                    debugger;
-                    alert(response.id);
-                    //$("#spnGetdet").html(response.d);
+                    hidePleaseWait();
+                    clearControl();
+                    $("#divSuccess").attr("style", "display:block;font-size:16px");
+                    setTimeout(function () {
+                        $("#divSuccess").attr("style", "display:none;font-size:16px");
+                    }, 5000);
 
                 },
                 failure: function (msg) {
@@ -707,24 +716,9 @@
             });
         }
 
-        //$('#contact-submit').on('click', postContactDetails());
-        (function() {
-          'use strict';
-          window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-              form.addEventListener('submit', function(event) {
-                if (form.checkValidity() === false) {
-                  event.preventDefault();
-                  event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-              }, false);
-            });
-          }, false);
-        })();
+        function clearControl() {
+            $("#contact-name,#contact-email,#contact-message").val("").removeClass("errorborder successborder");
+        }
 
       </script>
   </body>

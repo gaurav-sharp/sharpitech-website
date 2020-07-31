@@ -599,7 +599,7 @@
                                  </div>    
                         
                          
-                            <button id="btnsubmit" onclick="sendMail('all');" class="btn btn-primary">Submit</button>
+                            <button id="btnsubmit" onclick="postContactDetails()" class="btn btn-primary">Submit</button>
                                                  
                     </div>
                 </div>
@@ -662,20 +662,20 @@
                 );
             }
         });
-        $('#contact-name').on('blur', function (e) {
-            isButtonSubmitValidation = false;
-            validation(isButtonSubmitValidation, "name");
-        });
+        //$('#contact-name').on('blur', function (e) {
+        //    isButtonSubmitValidation = false;
+        //    validation(isButtonSubmitValidation, "name");
+        //});
 
-        $("#contact-email").on('blur', function (e) {
-            isButtonSubmitValidation = false;
-            validation(isButtonSubmitValidation, "email");
-        });
+        //$("#contact-email").on('blur', function (e) {
+        //    isButtonSubmitValidation = false;
+        //    validation(isButtonSubmitValidation, "email");
+        //});
 
-        $("#contact-message").on('blur', function (e) {
-            isButtonSubmitValidation = false;
-            validation(isButtonSubmitValidation, "phone");
-        })
+        //$("#contact-message").on('blur', function (e) {
+        //    isButtonSubmitValidation = false;
+        //    validation(isButtonSubmitValidation, "phone");
+        //})
        
 
         function sendMail(type) {
@@ -795,6 +795,29 @@
 
         function clearControl() {
             $("#contact-name,#contact-email,#contact-message").val("").removeClass("errorborder successborder");
+        }
+
+        function postContactDetails() {
+            showPleaseWait();
+            $.ajax({
+                type: "POST",
+                url: "sitService.asmx/PostContactDetails",
+                data: "{'name':'" + $("#contact-name").val() + "','email': '" + $("#contact-email").val() + "', 'message':'" + $("#contact-message").val() + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    hidePleaseWait();
+                    clearControl();
+                    $("#divSuccess").attr("style", "display:block;font-size:16px");
+                    setTimeout(function () {
+                        $("#divSuccess").attr("style", "display:none;font-size:16px");
+                    }, 5000);
+
+                },
+                failure: function (msg) {
+                    alert(msg);
+                }
+            });
         }
 
     </script>

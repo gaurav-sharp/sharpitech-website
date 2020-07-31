@@ -58,7 +58,6 @@ public class clsMail
                 var client = MailConfiguration();
                 #endregion
 
-
                 #region for sending mail to admin address
                 var adminMailMessage = GetMailBody(ConfigurationManager.AppSettings["EmailFrom"],adminSubject, name, email, phone, description, adminTemplate, ConfigurationManager.AppSettings["UserName"]);
                if (isAttachment)
@@ -71,8 +70,8 @@ public class clsMail
 
             #endregion
 
-            #region for sending mail to visitor address
-            var userMailMessage = GetMailBody(email,userSubject, name, email, phone, "",userTemplate);
+                #region for sending mail to visitor address
+                var userMailMessage = GetMailBody(email,userSubject, name, email, phone, "",userTemplate);
 
                 foreach (var mailadress in userMailMessage.To)
                 {
@@ -88,12 +87,12 @@ public class clsMail
                 #endregion for sending mail to visitor address
 
                
-                return "We appreciate you contacting us. One of our colleagues will get back in touch with you soon!";
+                return "Success";
             }
 
             catch (Exception ex)
             {
-                return "Mail not sent";
+                return ex.Message + " Inner exp: " + ex.InnerException;
             }
         }
   

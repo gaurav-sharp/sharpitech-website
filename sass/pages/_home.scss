@@ -728,10 +728,16 @@
                     text-align: center;
                     
                     & .what-we-offer__items--item-title {
-                        h2 {
+                        a {
                             font-family: "Noto Serif", serif;
                             font-size: 2rem;
                             color: $color-white;
+                            cursor: pointer;
+
+                            &:hover,
+                            &:focus {
+                                text-decoration: underline;
+                            }
                         }
                     }
                     & .what-we-offer__items--item-desc {
