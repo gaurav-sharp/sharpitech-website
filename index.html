@@ -68,9 +68,9 @@
     <div class="hero-banner">
 
         <div class="container">
-            
+
             <!-- <img src="images/lampSlice_03.png" alt="" class="hero-banner__img--lamp">
-            
+
             <img src="images/whiteImagePatch.png" alt="" class="hero-banner__img--whitePatch"> -->
             <div class="hero-baner__text">
                 <div class="hero-baner__text--title">
@@ -78,7 +78,7 @@
                 </div>
                 <div class="hero-baner__text--subtitle">
                 <h2>Solidifying Business Processes</h2>
-                </div> 
+                </div>
                 <div class="hero-baner__text--description">
                 <p>Simplicity is not a coincidence- it's a thought process which propels it. We combine Logistics DNA with tech-driven and disruptive mindset to provide our customer with high-end IT Solutions.</p>
                 </div>
@@ -97,7 +97,7 @@
                           <a class="dropdown-item" href="./sharplogistics.html">SHARP LOGISTICS</a>
                         </div>
                     </div>
-                </div>    
+                </div>
             </div>
             <div class="hero-baner__img">
                 <img src="images/homeSlider1.png">
@@ -173,7 +173,7 @@
         <div class="container">
             <div class="who-we-are__title">
                 <h1 class="who-we-are__title--title">
-                    Who We Are   
+                    Who We Are
                 </h1>
                 <p class="who-we-are__title--desc">
                     Sharp iTech founded in 2008 is a part of Saksham group of company. The group is having global footprints over 80+ countries. The millions of hours of on-field experience in logistics counts. Still waiting? Join our digital ecosystem NOW.
@@ -203,7 +203,7 @@
                     <p>Sharp iTech believes in simplifying operations of its customers in order to help them conduct their business smoothly with increased efficiency. Sharp iTech is about logistics process automation- we know logistics by its core and have been trying to streamline this area with enormous potential.</p>
                     <a class="button-white-border-hoverable" href=""> CONTACT US</a>
                 </div>
-            </div>   
+            </div>
         </div>
         <div class="container">
             <div class="why-sit__cards">
@@ -243,16 +243,16 @@
                 <!-- <video autoplay="autoplay">
                     <source src="images/videoDemo.mp4" type="video/mp4" />
                 </video> -->
-                  
+
             </div>
         </div>
-        
+
     </div>
     <div class="what-we-offer">
         <div class="container">
             <div class="shared-title">
                 <h1 class="shared-title__title">
-                    Our Offerings   
+                    Our Offerings
                 </h1>
                 <p class="shared-title__desc">
                     We have deep-rooted understanding of our customers' needs. We are ready to accept challenges and provide solutions through our array of innovative solutions and services mainly in the field of:
@@ -269,7 +269,7 @@
                     SERVICES
                 </button>
             </div>
-            <div class="what-we-offer__items">  
+            <div class="what-we-offer__items">
                 <div class="what-we-offer__items--item products">
                     <img src="images/icms.jpg" class="what-we-offer__items--item-img">
                     <div class="what-we-offer__items--item-overlay">
@@ -440,9 +440,9 @@
                 <p>We are a young, dynamic company looking to work with people who treat their work as the artisans craft. If you craft your work to perfection, plan the tasks before you do them, enjoy welding new ideas and understand the essence of "eureka-eureka" moment- well, consider yourself in. </p>
                 <a href="./career.html" class="button-black"> DROP YOUR RESUME</a>
             </div>
-            <div class="work-with-us__img">
+            <!-- <div class="work-with-us__img">
                 <img src="images/groupSlice_03.png" alt="">
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="our-team" id="home-about">
@@ -468,7 +468,7 @@
                         <h2>Supal Shah</h2>
                     </div>
                     <div class="our-team__member--designation">
-                        <p>CEO</p> 
+                        <p>CEO</p>
                     </div>
                 </div>
                 <div class="our-team__member">
@@ -522,7 +522,7 @@
                         <h2>Ganesh Patil</h2>
                     </div>
                     <div class="our-team__member--designation">
-                        <p>Manager</p> 
+                        <p>Manager</p>
                     </div>
                 </div>
                 <!-- <div class="our-team__member">
@@ -603,7 +603,7 @@
                             <a target="_blank" class="nav-link" href="https://www.youtube.com/channel/UCBdv24mNRhCeONgi0p3GK-w"><i class="fab fa-youtube"></i></a>
                         </li>
                     </ul>
-                      
+
                 </div>
                 <div class="contact-us__container--form">
                     <div class="contact-us__container--form-title">
@@ -675,7 +675,7 @@
         $("a.nav-link").on('click', function (event) {
           if (this.hash !== "") {
               event.preventDefault();
-        
+
               var hash = this.hash;
               $('html, body').animate({
                   scrollTop: $(hash).offset().top
@@ -684,7 +684,7 @@
           }
         });
         const player = new Plyr('#plyrVideo');
-        
+
         var plyr_options = {
         autoplay: false,
         clickToPlay: true,
@@ -694,7 +694,7 @@
         var players = plyr.setup(plyr_options);
 
         function postContactDetails() {
-            showPleaseWait(); 
+            showPleaseWait();
             $.ajax({
                 type: "POST",
                 url: "sitService.asmx/PostContactDetails",
