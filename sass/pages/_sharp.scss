@@ -1,0 +1,71 @@
+.pageSharp-service {
+    padding: 8rem 0rem;
+    
+    .pageSharp-service__title {
+        margin-bottom: 4rem;
+        
+        h3 {
+            padding-left: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: $color-primary;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                height: 2px;
+                width: 3rem;
+                background-color: $color-primary;
+                left: 0;
+                top:50%;
+                margin-top: -1px;
+            }
+        }
+        h1 {
+            font-size:4rem ;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        p {
+            width: 70%;
+            font-size: 1.5rem;
+            color: $light-grey;
+        }
+    }
+
+    .pageSharp-service__services {
+        & .pageSharp-service__services--service {
+            flex: 1;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 3rem;
+            text-align: left;
+            box-shadow: $shadow;
+            
+            & .pageSharp-service__services--service-thumbnail {
+                margin-bottom: 2rem;
+                
+                & img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            & .pageSharp-service__services--service-title {
+                margin-bottom: 1rem;
+                h2 {
+                    font-size: 2.5rem;
+                }
+            }
+
+            & .pageSharp-service__services--service-desc {
+                p {
+                    font-size: 1.5rem;
+                    color: $light-grey;
+                }
+            }
+        }
+    }
+}
