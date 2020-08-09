@@ -161,7 +161,8 @@ p {
   padding: 1rem 2rem;
   background-color: black;
   transition: all 0.2s;
-  overflow: hidden; }
+  overflow: hidden;
+  display: inline-block; }
   .button-black:before {
     content: '';
     display: block;
@@ -509,13 +510,19 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
           width: 100%;
           text-align: center;
           order: 2; } }
-      .hero-banner .container .hero-baner__text .hero-baner__text--title h1 {
-        font-family: "Noto Serif", serif;
-        font-size: 4rem;
-        margin-bottom: 2rem; }
-        @media (max-width: 767.98px) {
-          .hero-banner .container .hero-baner__text .hero-baner__text--title h1 {
-            text-align: center; } }
+      .hero-banner .container .hero-baner__text .hero-baner__text--title {
+        height: 7rem; }
+        .hero-banner .container .hero-baner__text .hero-baner__text--title h1 {
+          font-family: "Noto Serif", serif;
+          font-size: 3.5rem;
+          margin-bottom: 2rem;
+          display: inline-block; }
+          @media (max-width: 767.98px) {
+            .hero-banner .container .hero-baner__text .hero-baner__text--title h1 {
+              text-align: center; } }
+        .hero-banner .container .hero-baner__text .hero-baner__text--title .typed-cursor {
+          font-family: "Noto Serif", serif;
+          font-size: 4rem; }
       .hero-banner .container .hero-baner__text .hero-baner__text--subtitle h2 {
         font-family: "Noto Serif", serif;
         font-size: 2rem;
@@ -562,55 +569,50 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
 
 .quick-icons {
   padding: 8rem 0rem; }
-  .quick-icons .quick-icons__wrapper {
-    margin-top: 6rem;
-    display: flex; }
+  .quick-icons .row {
+    margin-top: 4rem; }
+  .quick-icons .quick-icons__icon {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem; }
     @media (max-width: 767.98px) {
-      .quick-icons .quick-icons__wrapper {
-        flex-direction: column; } }
-    .quick-icons .quick-icons__wrapper .quick-icons__icon {
-      flex: 1;
-      text-align: center;
-      padding: 0rem 2rem;
-      display: flex;
-      flex-direction: column;
+      .quick-icons .quick-icons__icon {
+        flex-direction: row;
+        text-align: left; } }
+    .quick-icons .quick-icons__icon .quick-icons__icon--icon {
       margin-bottom: 3rem; }
       @media (max-width: 767.98px) {
-        .quick-icons .quick-icons__wrapper .quick-icons__icon {
-          flex-direction: row;
-          text-align: left; } }
-      .quick-icons .quick-icons__wrapper .quick-icons__icon .quick-icons__icon--icon {
-        margin-bottom: 3rem; }
+        .quick-icons .quick-icons__icon .quick-icons__icon--icon {
+          margin-bottom: 0rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 2rem; } }
+      .quick-icons .quick-icons__icon .quick-icons__icon--icon img {
+        width: 100%;
+        height: auto;
+        filter: grayscale(0.5); }
         @media (max-width: 767.98px) {
-          .quick-icons .quick-icons__wrapper .quick-icons__icon .quick-icons__icon--icon {
-            margin-bottom: 0rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 2rem; } }
-        .quick-icons .quick-icons__wrapper .quick-icons__icon .quick-icons__icon--icon img {
-          width: 100%;
-          height: auto;
-          filter: grayscale(0.5); }
-          @media (max-width: 767.98px) {
-            .quick-icons .quick-icons__wrapper .quick-icons__icon .quick-icons__icon--icon img {
-              width: 18rem;
-              height: auto; } }
-      .quick-icons .quick-icons__wrapper .quick-icons__icon .quick-icons__icon--title {
-        margin-bottom: 2rem; }
-        .quick-icons .quick-icons__wrapper .quick-icons__icon .quick-icons__icon--title h2 {
-          font-family: "Noto Serif", serif;
-          font-size: 2rem; }
-      .quick-icons .quick-icons__wrapper .quick-icons__icon .quick-icons__icon--description {
-        margin-bottom: 1rem; }
-        .quick-icons .quick-icons__wrapper .quick-icons__icon .quick-icons__icon--description p {
-          font-size: 1.5rem;
-          color: #A7A9AB; }
-      .quick-icons .quick-icons__wrapper .quick-icons__icon .quick-icons__icon--action a {
-        font-size: 1.2rem;
-        color: black;
-        text-decoration: underline;
-        display: none; }
+          .quick-icons .quick-icons__icon .quick-icons__icon--icon img {
+            width: 18rem;
+            height: auto; } }
+    .quick-icons .quick-icons__icon .quick-icons__icon--title {
+      margin-bottom: 2rem; }
+      .quick-icons .quick-icons__icon .quick-icons__icon--title h2 {
+        font-family: "Noto Serif", serif;
+        font-size: 2rem; }
+    .quick-icons .quick-icons__icon .quick-icons__icon--description {
+      margin-bottom: 1rem; }
+      .quick-icons .quick-icons__icon .quick-icons__icon--description p {
+        font-size: 1.5rem;
+        color: #A7A9AB; }
+    .quick-icons .quick-icons__icon .quick-icons__icon--action a {
+      font-size: 1.2rem;
+      color: black;
+      text-decoration: underline;
+      display: none; }
 
 .who-we-are {
   padding: 8rem 0rem;
@@ -969,9 +971,8 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
           .contact-us .contact-us__container .contact-us__container--details .nav .nav-item a.nav-link:hover, .contact-us .contact-us__container .contact-us__container--details .nav .nav-item a.nav-link:focus {
             color: white; }
     .contact-us .contact-us__container .contact-us__container--form {
-      width: 80%;
       background-color: #f5f5f5;
-      padding: 4rem 4rem 4rem 35%;
+      padding: 4rem;
       float: right; }
       @media (max-width: 991.98px) {
         .contact-us .contact-us__container .contact-us__container--form {

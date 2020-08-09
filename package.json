@@ -20,8 +20,10 @@
     "imagesloaded": "^4.1.4",
     "isotope-layout": "^3.0.6",
     "jquery": "^3.5.1",
+    "leaflet": "^1.6.0",
     "particles.js": "^2.0.0",
     "plyr": "^3.6.2",
-    "slick-slider": "^1.8.2"
+    "slick-slider": "^1.8.2",
+    "typed.js": "^2.0.11"
   }
 }
