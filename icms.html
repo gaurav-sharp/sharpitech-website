@@ -27,7 +27,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="./index.html#home-about">About us</a>
+                        <a class="nav-link" href="./aboutus.html">About us</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -103,7 +103,7 @@
         <div class="container">
             <div class="pageIcms-quick-icon__title">
                 <div class="pageIcms-quick-icon__title--title">
-                    <h1>Why iCMS?</h1>
+                    <h1>Who can get benefitted</h1>
                 </div>
                 <div class="pageIcms-quick-icon__title--desc">
                     <p>You got enough reasons to choose iCMS as your preferred shipping ERP.</p>
@@ -115,7 +115,7 @@
                         <i class="far fa-bell"></i>
                     </div>
                     <div class="pageIcms-quick-icon__icons--icon__wrapper">
-                        <div class="pageIcms-quick-icon__icon--tile"><h2>Simplicitity</h2></div>
+                        <div class="pageIcms-quick-icon__icon--tile"><h2>Shipper</h2></div>
                         <div class="pageIcms-quick-icon__icon--desc"><p>Genius is making complex ideas simple. We blended our experience of IT and processes to codify the future with the mantra of keeping things simple and elegant.</p></div>
                     </div>
                 </div>
@@ -124,7 +124,7 @@
                         <i class="far fa-chart-bar"></i>
                     </div>
                     <div class="pageIcms-quick-icon__icons--icon__wrapper">
-                        <div class="pageIcms-quick-icon__icon--tile"><h2>Security</h2></div>
+                        <div class="pageIcms-quick-icon__icon--tile"><h2>Freight Forwarder</h2></div>
                         <div class="pageIcms-quick-icon__icon--desc"><p>One single vulnerability is what all an attacker needs.  We apply our vast knowledge of compliance and data security to make sure that you transact safely with us. </p></div>
                     </div>
                 </div>
@@ -133,8 +133,50 @@
                         <i class="far fa-gem"></i>
                     </div>
                     <div class="pageIcms-quick-icon__icons--icon__wrapper">
-                        <div class="pageIcms-quick-icon__icon--tile"><h2>Scalibility</h2></div>
+                        <div class="pageIcms-quick-icon__icon--tile"><h2>Carrier</h2></div>
                         <div class="pageIcms-quick-icon__icon--desc"><p>Code today but keep future in mind- the clock never sleeps. We know your journey of digital transformation would be incomplete if we don't envision the future.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pageIcms-counter">
+        <div class="container">
+            <div class="pageIcms-counter__wrapper">
+                <div class="pageIcms-counter__wrapper--item">
+                    <div class="pageIcms-counter__wrapper--item-outer">
+                        <i class="fas fa-globe"></i>
+                        <h1 id="counter-country" class="count"></h1>
+                    </div>
+                    <div class="pageIcms-counter__wrapper--item-title">
+                        <span>Countries</span>
+                    </div>
+                </div>
+                <div class="pageIcms-counter__wrapper--item">
+                    <div class="pageIcms-counter__wrapper--item-outer">
+                        <i class="fas fa-user"></i>
+                        <h1 id="counter-client" class="count"></h1>
+                    </div>
+                    <div class="pageIcms-counter__wrapper--item-title">
+                        <span>Active Clients</h1>
+                    </div>
+                </div>
+                <div class="pageIcms-counter__wrapper--item">
+                    <div class="pageIcms-counter__wrapper--item-outer">
+                        <i class="fas fa-users"></i>
+                        <h1 id="counter-user" class="count"></h1>
+                    </div>
+                    <div class="pageIcms-counter__wrapper--item-title">
+                        <span>Users</span>
+                    </div>
+                </div>
+                <div class="pageIcms-counter__wrapper--item">
+                    <div class="pageIcms-counter__wrapper--item-outer">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h1 id="counter-transaction" class="count"></h1>
+                    </div>
+                    <div class="pageIcms-counter__wrapper--item-title">
+                        <span>Transactions Completed</span>
                     </div>
                 </div>
             </div>
@@ -289,9 +331,33 @@
     <script src="node_modules/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="node_modules/isotope-layout/dist/isotope.pkgd.min.js"></script>
     <script src="node_modules/particles.js/particles.js"></script>
+    <script src="node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
     <script src="js/main.js"></script>
 
     <script>
+        $.fn.showprogress = function (id, progress) {
+            $({
+                counter: 1
+            }).animate({
+                counter: progress
+            }, {
+                duration: 3000,
+                step: function () {
+                    $('#' + id).html(Math.ceil(this.counter));
+                }
+            });
+        }
+
+        $('.pageIcms-counter').waypoint(function () {
+            $.fn.showprogress('counter-country', 4);
+            $.fn.showprogress('counter-client', 20);
+            $.fn.showprogress('counter-user', 400);
+            $.fn.showprogress('counter-transaction', 98135);
+            this.destroy()
+        }, {
+            offset: '80%'
+        });
+
         $("pageIcms-hero-banner__details--action a").on('click', function (event) {
           if (this.hash !== "") {
               event.preventDefault();

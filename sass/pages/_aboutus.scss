@@ -1,0 +1,38 @@
+.pageAbout-aboutUs {
+    padding: 8rem;
+
+    &__wrapper {
+        margin-top: 4rem;
+
+        &--text {
+            p {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+                text-align: justify;
+            }
+        }
+        &--image {
+            object-fit: cover;
+            img {
+                width: 100%;
+                height: auto;
+                
+            }
+        }
+    }    
+}
+
+.pageAbout-vision-mission {
+    padding: 8rem;
+    background-color: $grey-background;
+
+    &__title {
+        font-size: 4rem;
+        font-family: "Noto Serif", serif;
+        margin-bottom: 1rem;
+    }
+
+    &__content {
+        font-size: 1.5rem;
+    }
+}

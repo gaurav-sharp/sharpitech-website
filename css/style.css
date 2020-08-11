@@ -1096,6 +1096,34 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
         font-size: 1.5rem;
         color: #A7A9AB; }
 
+.pageIcms-counter {
+  padding: 8rem;
+  background-color: black; }
+  .pageIcms-counter__wrapper {
+    display: flex; }
+    .pageIcms-counter__wrapper--item {
+      width: 25%;
+      padding: 0rem 4rem; }
+      .pageIcms-counter__wrapper--item:not(:last-child) {
+        border-right: 1px solid rgba(255, 255, 255, 0.3); }
+      .pageIcms-counter__wrapper--item-outer {
+        display: flex;
+        color: white;
+        align-items: center;
+        margin-bottom: 1rem; }
+        .pageIcms-counter__wrapper--item-outer i {
+          font-size: 4rem;
+          margin-right: 2rem;
+          color: rgba(255, 255, 255, 0.5); }
+        .pageIcms-counter__wrapper--item-outer h1 {
+          font-size: 4rem;
+          font-weight: 600;
+          margin-bottom: 0rem;
+          color: white; }
+      .pageIcms-counter__wrapper--item-title {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 1.5rem; }
+
 .pageIcms-features-desktop {
   background-color: #f5f5f5;
   padding: 8rem 0rem; }
@@ -1683,3 +1711,27 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
     .pageSharp-service .pageSharp-service__services .pageSharp-service__services--service .pageSharp-service__services--service-desc p {
       font-size: 1.5rem;
       color: #A7A9AB; }
+
+.pageAbout-aboutUs {
+  padding: 8rem; }
+  .pageAbout-aboutUs__wrapper {
+    margin-top: 4rem; }
+    .pageAbout-aboutUs__wrapper--text p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      text-align: justify; }
+    .pageAbout-aboutUs__wrapper--image {
+      object-fit: cover; }
+      .pageAbout-aboutUs__wrapper--image img {
+        width: 100%;
+        height: auto; }
+
+.pageAbout-vision-mission {
+  padding: 8rem;
+  background-color: #f5f5f5; }
+  .pageAbout-vision-mission__title {
+    font-size: 4rem;
+    font-family: "Noto Serif", serif;
+    margin-bottom: 1rem; }
+  .pageAbout-vision-mission__content {
+    font-size: 1.5rem; }

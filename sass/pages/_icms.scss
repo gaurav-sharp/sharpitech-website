@@ -129,6 +129,47 @@
         }
     }
 }
+.pageIcms-counter {
+    padding: 8rem;
+    background-color: $color-black;
+    
+    &__wrapper {
+        display: flex;
+        
+        &--item {
+            width: 25%;
+            padding: 0rem 4rem;
+            &:not(:last-child) {
+                border-right: 1px solid rgba($color-white,0.3);    
+            }
+            
+            &-outer {
+                display: flex;
+                color: $color-white;
+                align-items: center;
+                margin-bottom: 1rem;
+
+                i {
+                    font-size: 4rem;
+                    margin-right: 2rem;
+                    color: rgba($color-white,0.5);
+                }
+
+                h1 {
+                    font-size: 4rem;
+                    font-weight: 600;
+                    margin-bottom: 0rem;
+                    color: rgba($color-white,1);
+                }
+            }
+
+            &-title {
+                color: rgba($color-white,0.5);
+                font-size: 1.5rem;
+            }
+        }   
+    }
+}
 .pageIcms-features-desktop{
     background-color: $grey-background;
     padding: 8rem 0rem;
