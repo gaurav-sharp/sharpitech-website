@@ -12,7 +12,8 @@
             }
         }
         &--image {
-            object-fit: cover;
+           object-fit: cover;
+
             img {
                 width: 100%;
                 height: auto;
@@ -22,17 +23,116 @@
     }    
 }
 
-.pageAbout-vision-mission {
-    padding: 8rem;
-    background-color: $grey-background;
+.pageAbout-vision {
+    padding: 0rem;
+    
+    &__vision {
+        padding: 4rem;
+        background-color: $grey-background;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.2s;
 
-    &__title {
-        font-size: 4rem;
-        font-family: "Noto Serif", serif;
-        margin-bottom: 1rem;
+        @include adapt(md) {
+            &:not(:last-child) {
+
+            }
+        }
+
+        &:hover {
+            transform: translateY(-10%);
+        }
+
+        &--title {
+            font-size: 3rem;
+            font-family: "Noto Serif", serif;
+            margin-bottom: 1rem;
+        }
+    
+        &--content {
+            font-size: 1.5rem;
+        }
+
+        &--icon {
+            position: absolute;
+            font-size: 12rem;
+            opacity: 0.05;
+            top: 30%;
+            left: 90%;
+            transform: translate(-50%,-50%);
+        }
     }
+}
 
-    &__content {
-        font-size: 1.5rem;
+.pageAbout-team {
+    padding: 8rem;
+    &__teams {
+        margin-top: 4rem;
+        
+        &--team {
+            display: flex;
+            margin-bottom: 6rem;
+
+            &-thumbnail {
+                width: 50%;
+                padding-right: 2rem;
+                
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            &-details {
+                width: 50%;
+
+                h3 {
+                    font-family: "Noto Serif", serif;
+                    font-size: 2.5rem;
+                    margin-bottom: 0.5rem;
+                }
+
+                h5 {
+                    font-size: 1.7rem;
+                    margin-bottom: 2rem;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                    text-align: justify;
+                    margin-bottom: 2rem;
+                }
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    @include clearfix;
+
+                    li {
+                        float: left;
+                        &:not(:last-child) {
+                            margin-right: 1rem;
+                        }
+
+                        a {
+                            display: inline-block;
+                            width: 4rem;
+                            height: 4rem;
+                            background-color: $grey-background;
+                            border: 1px solid rgba($light-grey,0.3);
+                            display: inline-flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 1.4rem;
+                            text-decoration: none;
+                            border-radius: 50%;
+                            color: $dark-grey;
+                        }
+                    }
+
+                }
+            }
+        }
     }
 }

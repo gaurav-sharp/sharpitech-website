@@ -1726,12 +1726,78 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
         width: 100%;
         height: auto; }
 
-.pageAbout-vision-mission {
-  padding: 8rem;
-  background-color: #f5f5f5; }
-  .pageAbout-vision-mission__title {
-    font-size: 4rem;
-    font-family: "Noto Serif", serif;
-    margin-bottom: 1rem; }
-  .pageAbout-vision-mission__content {
-    font-size: 1.5rem; }
+.pageAbout-vision {
+  padding: 0rem; }
+  .pageAbout-vision__vision {
+    padding: 4rem;
+    background-color: #f5f5f5;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s; }
+    .pageAbout-vision__vision:hover {
+      transform: translateY(-10%); }
+    .pageAbout-vision__vision--title {
+      font-size: 3rem;
+      font-family: "Noto Serif", serif;
+      margin-bottom: 1rem; }
+    .pageAbout-vision__vision--content {
+      font-size: 1.5rem; }
+    .pageAbout-vision__vision--icon {
+      position: absolute;
+      font-size: 12rem;
+      opacity: 0.05;
+      top: 30%;
+      left: 90%;
+      transform: translate(-50%, -50%); }
+
+.pageAbout-team {
+  padding: 8rem; }
+  .pageAbout-team__teams {
+    margin-top: 4rem; }
+    .pageAbout-team__teams--team {
+      display: flex;
+      margin-bottom: 6rem; }
+      .pageAbout-team__teams--team-thumbnail {
+        width: 50%;
+        padding-right: 2rem; }
+        .pageAbout-team__teams--team-thumbnail img {
+          width: 100%;
+          height: auto; }
+      .pageAbout-team__teams--team-details {
+        width: 50%; }
+        .pageAbout-team__teams--team-details h3 {
+          font-family: "Noto Serif", serif;
+          font-size: 2.5rem;
+          margin-bottom: 0.5rem; }
+        .pageAbout-team__teams--team-details h5 {
+          font-size: 1.7rem;
+          margin-bottom: 2rem; }
+        .pageAbout-team__teams--team-details p {
+          font-size: 1.4rem;
+          text-align: justify;
+          margin-bottom: 2rem; }
+        .pageAbout-team__teams--team-details ul {
+          list-style: none;
+          padding: 0;
+          margin: 0; }
+          .pageAbout-team__teams--team-details ul::after {
+            content: "";
+            clear: both;
+            display: table; }
+          .pageAbout-team__teams--team-details ul li {
+            float: left; }
+            .pageAbout-team__teams--team-details ul li:not(:last-child) {
+              margin-right: 1rem; }
+            .pageAbout-team__teams--team-details ul li a {
+              display: inline-block;
+              width: 4rem;
+              height: 4rem;
+              background-color: #f5f5f5;
+              border: 1px solid rgba(167, 169, 171, 0.3);
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.4rem;
+              text-decoration: none;
+              border-radius: 50%;
+              color: #58585B; }
