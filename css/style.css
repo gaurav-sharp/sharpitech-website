@@ -1771,7 +1771,9 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
           margin-bottom: 0.5rem; }
         .pageAbout-team__teams--team-details h5 {
           font-size: 1.7rem;
-          margin-bottom: 2rem; }
+          margin-bottom: 2rem;
+          font-weight: bold;
+          color: #A7A9AB; }
         .pageAbout-team__teams--team-details p {
           font-size: 1.4rem;
           text-align: justify;
