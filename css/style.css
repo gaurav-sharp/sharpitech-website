@@ -1316,7 +1316,7 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
           .pageIcms-features-mobile .container .pageIcms-features-mobile__images img {
             width: 50%; } }
     .pageIcms-features-mobile .container .pageIcms-features-mobile__details {
-      width: 70%;
+      width: 50%;
       padding-right: 8rem; }
       @media (max-width: 991.98px) {
         .pageIcms-features-mobile .container .pageIcms-features-mobile__details {
