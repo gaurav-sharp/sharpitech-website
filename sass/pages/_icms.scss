@@ -192,7 +192,7 @@
 }
 .pageIcms-products {
     padding: 8rem 0rem;
-    background-color: $grey-background;
+    
 
     & .pageIcms-products__header {
         display: flex;
@@ -263,6 +263,7 @@
                     justify-content: center;
                     align-items: center;
                     transition: all 0.2s;
+                    text-align: center;
 
                     & h1 {
                         padding: 2rem;
@@ -284,7 +285,7 @@
                 left: 0;
                 width: 100%;
                 height: 10rem;
-                background-color: $color-white;
+                background-color: $grey-background;
                 transition: all 0.2s;
                 padding: 2rem;
                 overflow: hidden;
@@ -301,7 +302,8 @@
 }
 
 .pageIcms-features {
-    padding: 8rem;
+    padding: 8rem 8rem;
+    background-color: $grey-background;
 
     &__header {
         text-align: center;
