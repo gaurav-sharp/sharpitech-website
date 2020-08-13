@@ -934,7 +934,18 @@ background-color: $grey-background;
         }
         
         & .contact-us__container--map {
-            
+            width: 100%;
+            height: 100%;
+            @include adapt(md) {
+                height: 50rem;
+            }
+        }
+
+        & .contact-us__container--changeMap {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            z-index: 999;
         }
 
         & .contact-us__container--form {

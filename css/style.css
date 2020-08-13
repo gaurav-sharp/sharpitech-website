@@ -970,6 +970,17 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
             color: white; }
           .contact-us .contact-us__container .contact-us__container--details .nav .nav-item a.nav-link:hover, .contact-us .contact-us__container .contact-us__container--details .nav .nav-item a.nav-link:focus {
             color: white; }
+    .contact-us .contact-us__container .contact-us__container--map {
+      width: 100%;
+      height: 100%; }
+      @media (max-width: 991.98px) {
+        .contact-us .contact-us__container .contact-us__container--map {
+          height: 50rem; } }
+    .contact-us .contact-us__container .contact-us__container--changeMap {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      z-index: 999; }
     .contact-us .contact-us__container .contact-us__container--form {
       background-color: #f5f5f5;
       padding: 4rem;
@@ -1142,7 +1153,6 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
 .pageIcms-products {
   padding: 8rem 0rem; }
   .pageIcms-products .pageIcms-products__header {
-    display: flex;
     margin-bottom: 6rem; }
     .pageIcms-products .pageIcms-products__header .pageIcms-products__header--title h1 {
       font-size: 4rem;

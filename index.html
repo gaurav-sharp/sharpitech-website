@@ -576,8 +576,11 @@
     <div class="contact-us" id="home-contact">
         <div class="container">
             <div class="contact-us__container row">
-                <div id="map" class="col-md-6 contact-us__container--map">
-                    
+                <div class="col-md-6 p-0 position-relative">
+                    <div id="map" class="contact-us__container--map">
+
+                    </div>
+                    <button class="contact-us__container--changeMap btn button-black">HAMBURG</button>
                 </div>
                 <div class="contact-us__container--form col-md-6">
                     <div class="contact-us__container--form-title">
@@ -671,15 +674,37 @@
             backSpeed: 50
         });
 
-        var map = L.map('map').setView([19.11473, 72.84992], 13);
+        var indiaDefult = true
 
+        $('.contact-us__container--changeMap').on('click',function(){
+            if(indiaDefult==true) {
+                $(this).html('MUMBAI');
+                map.setView(new L.LatLng(53.55542, 10.00206), 14);
+                hamburgOffice.openPopup();
+                indiaDefult=false;
+            }
+            else {
+                $(this).html('HAMBURG');
+                map.setView(new L.LatLng(19.12300, 72.84992), 14);
+                indiaOffice.openPopup();
+                indiaDefult=true;
+            }
+        });
+
+        var map = L.map('map');
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        L.marker([19.11473, 72.84992]).addTo(map)
-        .bindPopup('<b>SharpITech Solutions</b><br>110, 1st Floor, Hub Town Solaris, Andheri (E),<br> Mumbai, MH, 400058. India');
+        var hamburgOffice = L.marker([53.55042, 10.00206]).addTo(map).bindPopup('<b>SharpITech Solutions</b><br>Hamburg, Germany');
+        var indiaOffice = L.marker([19.11473, 72.84992]).addTo(map).bindPopup('<b>SharpITech Solutions</b><br>110, 1st Floor, Hub Town Solaris, Andheri (E),<br> Mumbai, MH, 400058. India');
+        
+        var officeLayerGroup = L.layerGroup([indiaOffice, hamburgOffice]);
 
+        map.addLayer(officeLayerGroup);
+        
+        map.setView(new L.LatLng(19.12300, 72.84992), 14);
+        indiaOffice.openPopup();
 
         const player = new Plyr('#plyrVideo');
 
