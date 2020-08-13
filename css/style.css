@@ -1153,10 +1153,14 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
 .pageIcms-products {
   padding: 8rem 0rem; }
   .pageIcms-products .pageIcms-products__header {
-    margin-bottom: 6rem; }
+    margin-bottom: 6rem;
+    text-align: center; }
     .pageIcms-products .pageIcms-products__header .pageIcms-products__header--title h1 {
       font-size: 4rem;
-      font-weight: 700; }
+      margin-bottom: 1rem; }
+    .pageIcms-products .pageIcms-products__header .pageIcms-products__header--subtitle p {
+      font-size: 1.5rem;
+      color: #A7A9AB; }
   .pageIcms-products .pageIcms-products__body .pageIcms-products__body--product {
     position: relative;
     width: 100%;

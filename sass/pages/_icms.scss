@@ -196,16 +196,20 @@
 
     & .pageIcms-products__header {
         margin-bottom: 6rem;
+        text-align: center;
         
         & .pageIcms-products__header--title {
             h1 {
                 font-size: 4rem;
-                font-weight: 700;
+                margin-bottom: 1rem;
             }
         }
         
-        & .pageIcms-products__header--actors {
-            
+        & .pageIcms-products__header--subtitle {
+            p {
+                font-size: 1.5rem;
+                color: $light-grey;
+            }
         }
     }
 
