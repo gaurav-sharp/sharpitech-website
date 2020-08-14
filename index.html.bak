@@ -3,8 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
@@ -587,11 +585,11 @@
                         <h1>We'd love to hear from you</h1>
                         <p>Whether you have question about features or pricing, want a demo or anything else- our team is there 24*7 to help you.</p>
                     </div>
-                    <div id="divSuccess" style="display:none; font-size:16px; background-color:transparent;border:none" class="alert alert-success">
+                    <div id="divSuccess" style="display:none;font-size:16px" class="alert alert-success">
                         Thank you for showing interest.One of our teammate would connect with you.
                     </div>
                     <div class="contact-us__container--form-form">
-                        <form>
+                        <form id="contact-form">
                             <div class="form-group">
                                 <!-- <label for="contact-name">Name</label> -->
                                 <input type="text" class="form-control" id="contact-name" placeholder="Name">
@@ -604,7 +602,7 @@
                                 <!-- <label for="contact-message">Message</label> -->
                                 <textarea id="contact-message" class="form-control" cols="50" placeholder="Message"></textarea>
                             </div>
-                            <button onclick="postContactDetails('all');" class="button-black" type="button">SUBMIT</button>
+                            <button onclick="postContactDetails();" class="button-black" type="button">SUBMIT</button>
                         </form>
                     </div>
                 </div>
@@ -649,17 +647,13 @@
     <script src="node_modules/leaflet/dist/leaflet.js"></script>
     <script src="js/pleaseWait.js"></script>
     <script src="js/main.js" ></script>
-    <script src="js/pleaseWait.js"></script>
+    
 
-    <script>        
-
-        var isButtonSubmitValidation;
-
-
+    <script>
         $("a.nav-link").on('click', function (event) {
           if (this.hash !== "") {
               event.preventDefault();
-        
+
               var hash = this.hash;
               $('html, body').animate({
                   scrollTop: $(hash).offset().top
@@ -720,167 +714,32 @@
         };
         var players = plyr.setup(plyr_options);
 
-        $('#contact-name').on('blur keypress', function (e) {
-            alert("name");
-            isButtonSubmitValidation = false;
-            validation(isButtonSubmitValidation, "name");
-        });
+        function postContactDetails() {
+            showPleaseWait();
+            $.ajax({
+                type: "POST",
+                url: "sitService.asmx/PostContactDetails",
+                data: "{'name':'" + $("#contact-name").val() + "','email': '"+$("#contact-email").val()+"', 'message':'"+ $("#contact-message").val()+"'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    hidePleaseWait();
+                    clearControl();
+                    $("#divSuccess").attr("style", "display:block;font-size:16px");
+                    setTimeout(function () {
+                        $("#divSuccess").attr("style", "display:none;font-size:16px");
+                    }, 5000);
 
-        $("#contact-email").on('blur keypress', function (e) {
-            isButtonSubmitValidation = false;
-            validation(isButtonSubmitValidation, "email");
-        });
-
-        $("#contact-message").on('blur keyup', function (e) {
-            isButtonSubmitValidation = false;
-            validation(isButtonSubmitValidation, "phone");
-        })
-
-        function postContactDetails(type) {
-            isButtonSubmitValidation = true;
-            if (validation(isButtonSubmitValidation, type)) {
-                showPleaseWait();
-                $.ajax({
-                    type: "POST",
-                    url: "sitService.asmx/PostContactDetails",
-                    data: "{'name':'" + $("#contact-name").val() + "','email': '" + $("#contact-email").val() + "', 'message':'" + $("#contact-message").val() + "'}",
-                    contentType: "application/json; charset=utf-8",
-                    dataType: "json",
-                    success: function (response) {
-                        hidePleaseWait();
-                        clearControl();
-                        $("#divSuccess").attr("style", "display:block;font-size:16px;background-color:transparent;border:none");
-                        setTimeout(function () {
-                            $("#divSuccess").attr("style", "display:none;font-size:16px;background-color:transparent;border:none");
-                        }, 5000);
-
-                    },
-                    failure: function (msg) {
-                        alert(msg);
-                    }
-                });
-            }
+                },
+                failure: function (msg) {
+                    alert(msg);
+                }
+            });
         }
 
         function clearControl() {
             $("#contact-name,#contact-email,#contact-message").val("").removeClass("errorborder successborder");
         }
-
-        function validation(isButtonSubmitValidation, type) {
-            var isValid = true;
-            var regex = "";
-
-            switch (type) {
-
-                case "name":
-                case "all":
-                    if ($("#contact-name").val() == "") {
-                        $("#contact-name").removeClass("successborder").addClass("errorborder");
-                        $("#contact-name").focus();
-                        if (isButtonSubmitValidation)
-                            isValid = false;
-                        else
-
-                            return false
-                    }
-                    else {
-                        $("#contact-name").removeClass("errorborder").addClass("successborder");
-
-                    }
-                    if (type != "all")
-                        break;
-                case "email":
-                    if ($("#contact-email").val() == "") {
-                        $("#contact-email").removeClass("successborder").addClass("errorborder");
-                        $("#contact-email").focus();
-                        if (isButtonSubmitValidation)
-                            isValid = false;
-                        else
-                            return false
-
-                    }
-                    else {
-
-                        if (!IsValidEmail($("#contact-email").val())) {
-                            $("#contact-email").removeClass("successborder").addClass("errorborder");
-                           // $("#spnEmail").removeClass("hiderrormessage").addClass("showerrormessage").text("Invalid Email Id");
-                            $("#contact-email").focus();
-                            if (isButtonSubmitValidation)
-                                isValid = false;
-                            else
-                                return false
-
-                        }
-                        else {
-                            $("#contact-email").removeClass("errorborder").addClass("successborder");
-                        }
-                    }
-                    if (type != "all")
-                        break;
-                case "message":
-                    if ($("#contact-message").val() == "") {
-                        $("#contact-message").removeClass("successborder").addClass("errorborder");
-                        $("#contact-message").focus();
-                        if (isButtonSubmitValidation)
-                            isValid = false;
-                        else
-                            return false
-                    }
-                    else {
-                        $("#contact-message").removeClass("errorborder").addClass("successborder");
-                    }
-                    if (type != "all")
-                        break;
-                default:
-                    if ($("#contact-name").val() == "") {
-                        $("#contact-name").focus();
-                    }
-                    else if ($("#contact-email").val() == "") {
-                        $("#contact-email").focus();
-                    }
-                    else if (!IsValidEmail($("#contact-email").val())) {
-                        $("#contact-email").focus();
-                    }
-                    else if ($("#contact-message").val() == "") {
-                        $("#contact-message").focus();
-                    }
-                    return isValid;
-            }
-        }
-
-        function IsValidEmail(email) {
-            //Check minimum valid length of an Email.
-            if (email.length <= 2) {
-                return false;
-            }
-            //If whether email has @ character.
-            if (email.indexOf("@") == -1) {
-                return false;
-            }
-
-            var parts = email.split("@");
-            var dot = parts[1].indexOf(".");
-            var len = parts[1].length;
-            var dotSplits = parts[1].split(".");
-            var dotCount = dotSplits.length - 1;
-
-
-            //Check whether Dot is present, and that too minimum 1 character after @.
-            if (dot == -1 || dot < 2 || dotCount > 2) {
-                return false;
-            }
-
-            //Check whether Dot is not the last character and dots are not repeated.
-            for (var i = 0; i < dotSplits.length; i++) {
-                if (dotSplits[i].length == 0) {
-                    return false;
-                }
-            }
-
-            return true;
-        };
-
-       
 
       </script>
   </body>

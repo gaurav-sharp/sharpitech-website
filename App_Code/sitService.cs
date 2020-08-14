@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Web;
 using System.Web.Services;
 
-[WebService(Namespace = "https://support.sarjak.com/")]
+[WebService(Namespace = "http://tempuri.org/")]
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
 // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
 [System.Web.Script.Services.ScriptService]
@@ -15,7 +16,7 @@ public class sitService : System.Web.Services.WebService
     {
         
        #region Send Mail 
-        var resoonse = clsMail.SendMail(name, email, "", message, "", "New query received", "Enquiry submitted successfully", "~/EmailTemplate/contactAdminEmailTemplate.html", "~/EmailTemplate/contactUserEmailTemplate.html", false);
+        var resoonse = clsMail.SendMail(name, email, "", message, "", "New lead received", "Enquiry submitted successfully", "~/EmailTemplate/contactAdminEmailTemplate.html", "~/EmailTemplate/contactUserEmailTemplate.html", false);
         return resoonse;  
        #endregion      
 

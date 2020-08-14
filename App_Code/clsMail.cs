@@ -59,7 +59,7 @@ public class clsMail
                 #endregion
 
                 #region for sending mail to admin address
-                var adminMailMessage = GetMailBody(ConfigurationManager.AppSettings["EmailFrom"],adminSubject, name, email, phone, description, adminTemplate, ConfigurationManager.AppSettings["UserName"]);
+                var adminMailMessage = GetMailBody(ConfigurationManager.AppSettings["AdminEmail"],adminSubject, name, email, phone, description, adminTemplate, ConfigurationManager.AppSettings["UserName"]);
                if (isAttachment)
                {
                 Attachment attachment = new Attachment(HttpContext.Current.Server.MapPath("~/Resume/" + fileName));
@@ -92,7 +92,7 @@ public class clsMail
 
             catch (Exception ex)
             {
-                return ex.Message + " Inner exp: " + ex.InnerException;
+            return ex.Message + " Inner exp: "+ex.InnerException;
             }
         }
   

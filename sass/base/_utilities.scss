@@ -207,27 +207,22 @@
 }
 
 .showerrormessage {
-  color: $color-red;
-  display: block;
-}
+  color: #dc3545;
+  display: block; }
 
 .hiderrormessage {
-  display: none;
-}
+  display: none; }
 
 .errorborder {
-  border-color: $color-red !important;
-}
+  border-color: #dc3545 !important; }
 
 .successborder {
-  border-color: $color-red !important;
+    border-color: #34b752 !important
 }
 
 .modal-content {
   background-color: transparent !important;
-  border: none !important;
-}
+  border: none !important; }
 
 .modal-header {
-  border-bottom: none;
-}
+  border-bottom: none; }

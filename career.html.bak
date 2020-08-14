@@ -107,7 +107,7 @@
                             <input type="file" class="custom-file-input" id="career-file" aria-describedby="inputGroupFileAddon04" accept=".doc,.docx,.pdf">
                             <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
                         </div>
-                        <button type="button" onclick="PostCareerDetails('all');" class="btn button-black">Submit</button>
+                        <button type="button" onclick="PostCareerDetails('all');" class="btn button-black">SUBMIT</button>
                     </form>
                 </div>
             </div>
@@ -407,10 +407,6 @@
 
             return true;
         };
-
-
     </script>
-
 </body>
-
 </html>
