@@ -1837,7 +1837,7 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
       color: #A7A9AB; }
 
 .pageAbout-aboutUs {
-  padding: 8rem; }
+  padding: 8rem 0rem; }
   .pageAbout-aboutUs__wrapper {
     margin-top: 4rem; }
     .pageAbout-aboutUs__wrapper--text p {
@@ -1875,7 +1875,7 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
       transform: translate(-50%, -50%); }
 
 .pageAbout-team {
-  padding: 8rem; }
+  padding: 8rem 0rem; }
   .pageAbout-team__teams {
     margin-top: 4rem; }
     .pageAbout-team__teams--team {
