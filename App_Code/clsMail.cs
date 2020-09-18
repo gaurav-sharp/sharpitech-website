@@ -59,13 +59,19 @@ public class clsMail
                 #endregion
 
                 #region for sending mail to admin address
-                var adminMailMessage = GetMailBody(ConfigurationManager.AppSettings["AdminEmail"],adminSubject, name, email, phone, description, adminTemplate, ConfigurationManager.AppSettings["UserName"]);
-               if (isAttachment)
+                
+            var adminMailMessage = GetMailBody(ConfigurationManager.AppSettings["AdminEmail"],adminSubject, name, email, phone, description, adminTemplate, ConfigurationManager.AppSettings["UserName"]);
+            adminMailMessage.To.Add(new MailAddress("hr@sharpitech.in"));
+
+            if (isAttachment)
                {
                 Attachment attachment = new Attachment(HttpContext.Current.Server.MapPath("~/Resume/" + fileName));
                 adminMailMessage.Attachments.Add(attachment);
                 adminMailMessage.Priority = MailPriority.High;
-              }
+
+            } else {
+                adminMailMessage.To.Add(new MailAddress("nilesh.j@sharpitech.in"));
+            }
             client.Send(adminMailMessage);
 
             #endregion
