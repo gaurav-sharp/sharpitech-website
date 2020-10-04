@@ -333,6 +333,116 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
           font-size: 1.5rem;
           color: #A7A9AB; }
 
+.page-loader {
+  min-height: 100vh;
+  color: #ADAFB6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F9FBFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  opacity: 1;
+  transition: opacity 0.2s linear; }
+  .page-loader.loaded {
+    opacity: 0;
+    pointer-events: none; }
+  .page-loader .boxes {
+    --size: 32px;
+    --duration: 800ms;
+    height: calc(var(--size) * 2);
+    width: calc(var(--size) * 3);
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+    margin-top: calc(var(--size) * 1.5 * -1);
+    transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px); }
+    .page-loader .boxes .box {
+      width: var(--size);
+      height: var(--size);
+      top: 0;
+      left: 0;
+      position: absolute;
+      transform-style: preserve-3d; }
+      .page-loader .boxes .box:nth-child(1) {
+        transform: translate(100%, 0);
+        animation: box1 var(--duration) linear infinite; }
+      .page-loader .boxes .box:nth-child(2) {
+        transform: translate(0, 100%);
+        animation: box2 var(--duration) linear infinite; }
+      .page-loader .boxes .box:nth-child(3) {
+        transform: translate(100%, 100%);
+        animation: box3 var(--duration) linear infinite; }
+      .page-loader .boxes .box:nth-child(4) {
+        transform: translate(200%, 0);
+        animation: box4 var(--duration) linear infinite; }
+      .page-loader .boxes .box > div {
+        --background: #5C8DF6;
+        --top: auto;
+        --right: auto;
+        --bottom: auto;
+        --left: auto;
+        --translateZ: calc(var(--size) / 2);
+        --rotateY: 0deg;
+        --rotateX: 0deg;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: var(--background);
+        top: var(--top);
+        right: var(--right);
+        bottom: var(--bottom);
+        left: var(--left);
+        transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ)); }
+        .page-loader .boxes .box > div:nth-child(1) {
+          --top: 0;
+          --left: 0; }
+        .page-loader .boxes .box > div:nth-child(2) {
+          --background: #145af2;
+          --right: 0;
+          --rotateY: 90deg; }
+        .page-loader .boxes .box > div:nth-child(3) {
+          --background: #447cf5;
+          --rotateX: -90deg; }
+        .page-loader .boxes .box > div:nth-child(4) {
+          --background: #DBE3F4;
+          --top: 0;
+          --left: 0;
+          --translateZ: calc(var(--size) * 3 * -1); }
+
+@keyframes box1 {
+  0%,
+  50% {
+    transform: translate(100%, 0); }
+  100% {
+    transform: translate(200%, 0); } }
+
+@keyframes box2 {
+  0% {
+    transform: translate(0, 100%); }
+  50% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(100%, 0); } }
+
+@keyframes box3 {
+  0%,
+  50% {
+    transform: translate(100%, 100%); }
+  100% {
+    transform: translate(0, 100%); } }
+
+@keyframes box4 {
+  0% {
+    transform: translate(200%, 0); }
+  50% {
+    transform: translate(200%, 100%); }
+  100% {
+    transform: translate(100%, 100%); } }
+
 .navbar {
   padding: 1.2rem 0rem;
   font-size: 1.5rem;
@@ -1822,7 +1932,7 @@ a.scroll-to-top:link, a.scroll-to-top:hover, a.scroll-to-top:visited {
     flex-direction: column;
     margin-bottom: 3rem;
     text-align: left;
-    box-shadow: 0rem 0px 1rem rgba(167, 169, 171, 0.5); }
+    box-shadow: #DBE3F4; }
     .pageSharp-service .pageSharp-service__services .pageSharp-service__services--service .pageSharp-service__services--service-thumbnail {
       margin-bottom: 2rem; }
       .pageSharp-service .pageSharp-service__services .pageSharp-service__services--service .pageSharp-service__services--service-thumbnail img {

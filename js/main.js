@@ -74,7 +74,7 @@ $('.our-client--slider').slick({
   });
 
 $(document).ready(function(){
-
+  $('.page-loader').addClass('loaded');
 });
 
 particlesJS("particles-js", 
